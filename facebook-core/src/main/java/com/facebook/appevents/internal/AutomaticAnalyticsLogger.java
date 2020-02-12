@@ -200,6 +200,10 @@ public class AutomaticAnalyticsLogger {
                             Constants.IAP_INTRO_PRICE_CYCLES,
                             introductoryPriceCycles);
                 }
+
+                params.putCharSequence(
+                        "subscription_id",
+                        purchaseJSON.getString("purchaseToken"));
             }
 
             for (String key : extraParameter.keySet()) {
